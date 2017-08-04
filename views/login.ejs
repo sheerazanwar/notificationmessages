@@ -1,0 +1,23 @@
+<html>
+<head>
+    <% include templetes/header.ejs%>
+</head>
+
+<body>
+    <h1>Welcome to Login</h1>
+   <form method="post" action="/authenticate">
+  <p>
+    <label>email:</label>
+    <input type="text" name="email">
+  </p>
+  <p>
+    <label>Password:</label>
+    <input type="password" name="password">
+  </p>
+  <p>
+    <input type="submit" value="Login">
+  </p>
+</form>
+</body>
+
+</html>
