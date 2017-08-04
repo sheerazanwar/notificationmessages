@@ -1,5 +1,5 @@
 {
-  "name": "newsandupdates",
+  "name": "notificationmessages",
   "version": "1.0.0",
   "description": "news and updates system for student of university",
   "main": "server.js",
