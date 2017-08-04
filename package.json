@@ -4,7 +4,8 @@
   "description": "news and updates system for student of university",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "sheeraz",
   "license": "ISC",
@@ -14,5 +15,13 @@
     "mongoose": "^4.11.5",
     "morgan": "^1.8.2",
     "passport": "^0.3.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sherryduggal/notificationmessages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sherryduggal/notificationmessages/issues"
+  },
+  "homepage": "https://github.com/sherryduggal/notificationmessages#readme"
 }
