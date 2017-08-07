@@ -9,12 +9,18 @@ exports.register = function (req, res) {
         var newUser = new User({
             email: req.body.email,
             password: req.body.password,
+             name: req.body.name,
+            registration: req.body.registration,
+            department: req.body.department,
+            semester: req.body.semester,
+            degree: req.body.degree,
+            role:req.body.role
         });
         newUser.save((err) => {
             if (err) {
-                return res.json({ success: false, message: 'Please enter email and password.' });
+                return res.json({ success: false, message: 'Please enter all credentials.' });
             } else {
-                return res.json({ success: true, message: 'wala' });
+                return res.json({ success: true, message: 'registered successfully' });
             }
         });
     }

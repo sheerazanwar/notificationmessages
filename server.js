@@ -30,6 +30,6 @@ app.use('/api',require('./routes/unauthenticated.js')); //routes which does't re
 require('./config/passport')(passport);
 app.use('/api',passport.authenticate('jwt', { session: false }),require('./routes/authenticated.js'));
 
-app.get('*', (req, res) => res.status(404).send({msg:'Bik gai ha.'}));
+app.get('*', (req, res) => res.status(404).send({error:'page not found'}));
 
 app.listen(port, () => console.log('Server is live on port : ', port));
