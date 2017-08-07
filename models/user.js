@@ -7,7 +7,8 @@ var UserSchema = new mongoose.Schema({
     role:{type:String,default:'student',enum:['student','admin']},
     department:{type:String,required:true},
     semester:{type:String,required:true},
-    degree:{type:String,required:true}
+    degree:{type:String,required:true},
+
 });
 
 UserSchema.pre('save', function (next) {
