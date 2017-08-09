@@ -28,12 +28,11 @@ exports.add=function(req,res){
     userID:req.user._id
   }).save(function(err,result){
     if(err){
-    res.status(500).send{error:err};
+    res.status(500).send{err:err};
     }else{
       res.status(200).send(message:"feedback submitted");
     }
   });
-  res.end();
 }
 }
 
