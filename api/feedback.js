@@ -26,7 +26,13 @@ exports.add=function(req,res){
   new feedback({
     feedback:params.feedback,
     userID:req.user._id
-  }).save();
+  }).save(function(err,result){
+    if(err){
+    res.status(500).send{error:err};
+    }else{
+      res.status(200).send(message:"feedback submitted");
+    }
+  });
   res.end();
 }
 }
