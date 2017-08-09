@@ -18,14 +18,14 @@ exports.getAll=function(req,res){
 //function used to post some data in database
 exports.add=function(req,res){
     var params = req.body;
- if(params.feedback==undefined || params.userID==undefined){
+ if(params.feedback==undefined){
    res.status(404).send({
      message:'one or more perameters missing'
    });
  }else{
   new feedback({
     feedback:params.feedback,
-    userID:params.userID
+    userID:req.user._id
   }).save();
   res.end();
 }
