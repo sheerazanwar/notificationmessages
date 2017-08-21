@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+h2{
+	color: #4CAF50;
+	
+	
+}
+
+input[type=text] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+div.news{
+	 width: 1000px;
+    height: 500px;
+}
+fieldset
+{
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+    border-radius: 8px;
+    margin: 0 5px;
+    height: 100%;
+legend
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="FEEDBACK1.css">
+	<link rel="stylesheet" href="UPLOADNEWS.css">
+</head>
+<body bgcolor="#808080"  background="images/banner.jpg" alt="" >
+
+<!-- Navbar (sit on top) -->
+
+    <a href="#home" class="w3-bar-item w3-button w3-wide">NEWS AND NOTIFICATION</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="FEEDBACK1.html" class="w3-bar-item w3-button">FEEDBACK</a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i> NOTIFICATION</a>
+      <a href="test2.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> LOGOUT</a>
+     
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+  
+
+
+<div align="center" >
+<h2 class="center" style="width=20px;" >Update Form </h2>
+</div>
+
+<div class="dropdown" style="padding:10px 22px;">
+	<label style="padding:0px 5px;" >Select Department:</label>
+	
+	<select>
+		<option value="All">All</option>
+        <option value="Information Tech">Information Tech</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Physic">Physic</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Electronic">Electronic</option>
+        <option value="Math">Math</option>
+        <option value="Stat">Stat</option>
+        <option value="Physic">Physic</option>
+	</select>
+	</ul>
+	<label style="padding:0px 5px; margin-left:10px" >Select Degree:</label>
+	<select>
+		<option value="All">All</option>              
+        <option value="Bs">Bs</option>
+        <option value="Msc">Msc</option>
+        <option value="Ms">Ms</option>
+        <option value="PhD">PhD</option>
+	</select>
+	<label style="padding:0px 5px; margin-left:10px">Select Semester:</label>
+	<select>
+        <option value="All">All</option>
+        <option value="Semesterone">Semester one</option>
+        <option value="Semestertwo">Semester two</option>
+        <option value="Semesterthree">Semester three</option>
+        <option value="Semesterfour">Semester four</option>
+        <option value="Semesterfive">Semester five</option>
+        <option value="Semestersix">Semester six</option>
+        <option value="Semesterseven">Semester seven</option>
+        <option value="Semestereight">Semester eight</option>                                                                             
+    </select>
+
+</div>
+
+<div style="padding:0 16px;" >
+
+<form type="submit" method="post" action="/notification/add">
+  <fieldset > 
+		<legend>Update News area:</legend>
+		<div class="news" margin="center">
+		<label><br>Enter Title of News</br></label>
+	  <textarea id="title" name="title" rows="5" cols="138"></textarea>
+	  <label><br>Enter News Description</br></label>
+	  <textarea id="message" name="message" rows="14" cols="138"></textarea><br>
+	</div>
+  </fieldset>
+   <div align="center">
+  <label>Last Date</label>
+  <input type="date" name="bday" max="2080-12-31" style="margin-top:5px;"><br>
+  <button style="padding:0px 16px; margin-top:5px;" ><br>Submit</br></button>
+  </div>
+</form>
+
+</div>
+
+</body>
+</html>

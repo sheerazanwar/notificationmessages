@@ -18,7 +18,7 @@ exports.getAll=function(req,res){
 //function used to post some data in database
 exports.add=function(req,res){
   var params = req.body;
- if(params.name==undefined || params.email==undefined || params.password==undefined){
+ if(params.sentTo==undefined ){
    res.status(404).send({
      message:'one or more perameters missing'
    });
@@ -27,7 +27,8 @@ exports.add=function(req,res){
     sentTo:params.sentTo,
     department:params.department,
     degree:params.degree,
-    semester:params.semester
+    semester:params.semester,
+    message:params.message
   }).save();
   res.end();
 }

@@ -5,6 +5,13 @@ var user = require('../api/user.js');
 router.post('/register', user.register);
 router.post('/authenticate', user.authenticate);
 
+
+var notification=require('../api/notification.js');
+router.get('/notification',notification.getAll);
+router.post('/notification/add',notification.add);
+router.put('/notification/:id',notification.edit);
+
+
 module.exports = router;
 
 

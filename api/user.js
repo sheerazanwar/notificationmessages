@@ -35,7 +35,13 @@ exports.authenticate = function (req, res) {
             if (user.comparePassword(req.body.password, function (err, isMatch) {
                 if (isMatch && !err) {
                     var token = jwt.sign(user, config.secret, { expiresIn: 10000 });
+                   if(user.role=="admin"){
+                    res.render("notifications");
+                   }else{
                     res.json({ success: true, token: 'JWT ' + token });
+                   }
+
+
                 } else {
                     res.json({ success: false, message: 'password did not match.' });
                 }
